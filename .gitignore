@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+heart_venv/
+prediction_history.json
+.env
+.ipynb_checkpoints/
+
+archive.zip
+.agents/

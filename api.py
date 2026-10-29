@@ -3,6 +3,7 @@ Docs page: http://127.0.0.1:8000/docs
 """
 import joblib
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from pydantic import BaseModel, Field, model_validator
 
@@ -10,6 +11,13 @@ bundle = joblib.load("model.joblib")
 model, FEATURES = bundle["model"], bundle["features"]
 
 app = FastAPI(title="Heart Disease Prediction API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class Patient(BaseModel):

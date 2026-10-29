@@ -1,14 +1,13 @@
 """Streamlit frontend. Start api.py first: uvicorn api:app --reload."""
 import csv
-import json
-from datetime import datetime
+import jsonfrom datetime import datetime
 from io import StringIO
 from pathlib import Path
 
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://heart-disease-api-4oke.onrender.com/predict"
 LEVELS = {"Normal": 1, "Above normal": 2, "Well above normal": 3}
 HISTORY_FILE = Path(__file__).with_name("prediction_history.json")
 

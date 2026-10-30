@@ -4,7 +4,7 @@ The backend (api.py) must be running first.
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://heart-disease-api-4oke.onrender.com/predict"
 
 st.set_page_config(page_title="Heart Disease Predictor", page_icon="❤️")
 st.title("❤️ Heart Disease Predictor")
